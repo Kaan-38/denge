@@ -1,0 +1,86 @@
+.ContainerNavbar {
+    position: fixed;
+    width: 300px;
+    height: calc(100vh - 78px);
+    background-color: white;
+    left: -300px;
+    top: 78px;
+    transition: 0.4s;
+    z-index: 100000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+}
+.ContainerNavbar::-webkit-scrollbar {
+    width: 8px;
+}
+.ContainerNavbar::-webkit-scrollbar-thumb {
+    background-color:#477ac4;
+}
+.ContainerNavbar::-webkit-scrollbar-track {
+    background-color: white;
+
+}
+.ContainerNavbar.active {
+    left:0px;
+}
+.ContainerNavbar .navbar-name {
+    position: relative;
+    width: auto;
+    height: 42px;
+    background-color: #477ac4;
+    box-shadow: 0 0 8px #477ac4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding-left: 7px;
+    padding-right: 7px;
+    border-radius: 3px;
+    top: 12px;
+}
+.ContainerNavbar .navbar-name h1 {
+    color: white;
+    text-shadow: 0 0 2px white;
+}
+.ContainerNavbar li {
+    position: relative;
+    width: 94%;
+    height: 54px;
+    background-color: white;
+    box-shadow: 0 0 10px white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    list-style-type: none;
+    margin-bottom: 8px;
+    top: 26px;
+    border-bottom: 5px solid #477ac4;
+}
+.ContainerNavbar li:hover {
+    background-color: white;
+    box-shadow: 0 0 10px white;
+    border-bottom: 5px solid #477ac4;
+}
+.ContainerNavbar li h3 {
+    position: relative;
+    color: #477ac4;
+    text-shadow: 0 0 2px #477ac4;
+    margin-left: 13px;
+}
+.ContainerNavbar li:hover h3 {
+    color: #477ac4;
+    text-shadow: 0 0 2px #477ac4;
+}
+.ContainerNavbar li::after {
+    position: absolute;
+    content: '';
+    width: 5px;
+    height: 42px;
+    background-color: #477ac4;
+    left: 4px;  
+}
+.ContainerNavbar li:hover::after {
+    background-color: #477ac4;
+}

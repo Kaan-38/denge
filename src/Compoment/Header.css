@@ -1,0 +1,303 @@
+.HeaderContainer {
+    position: fixed;
+    width: 100%;
+    height: 78px;
+    background-color:rgba(255,255,255,0.9);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 7px solid #477ac4;
+    z-index: 10000;
+}
+.HeaderContainerLogo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+.HeaderContainerLogo img {
+    width: 48px;
+    height: 48px;
+    animation: logo 8s linear infinite;
+}
+@keyframes logo {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.HeaderContainerLogo h1 {
+    position: relative;
+    width: auto;
+    height: 42px;
+    background-color: #477ac4;
+    box-shadow: 0 0 8px #477ac4;
+    color:white;
+    text-shadow: 0 0 2px white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 32px;
+    margin-left: 20px;
+}
+.HeaderContainerLogo h1:hover {
+    transform: scale(1.02);
+}
+.HeaderContainerLogo h1::after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    border-width: 12px;
+    border-style: solid;
+    border-color:#477ac4 transparent transparent transparent;
+    transform: rotate(90deg);
+    left:-24px;
+}
+
+.HeaderContainerLogin {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.HeaderContainerLogin h3 {
+    position: relative;
+    width:120px;
+    height: 38px;
+    background-color: #477ac4;
+    box-shadow: 0 0 12px #477ac4;
+    color: white;
+    text-shadow: 0 0 2px white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    cursor: pointer;
+    margin: 5px;
+}
+.HeaderContainerLogin h3:hover {
+    transform: scale(1.02);
+    letter-spacing: 0.4px;
+}
+
+.HeaderContainerSocialMedia {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.HeaderContainerSocialMedia span {
+    position: relative;
+    margin: 6px;
+}
+.HeaderContainerSocialMedia span .icon {
+    position: relative;
+    font-size: 36px;
+    color: #477ac4;
+    cursor: pointer;
+    transition: 1s;
+}
+.HeaderContainerSocialMedia span .icon:hover {
+    transform: rotate(360deg);
+}
+
+.icon-navbar-container {
+    position: relative;
+    width: 38px;
+    height: 38px;
+    background-color: #477ac4;
+    box-shadow: 0 0 8px #477ac4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.icon-navbar-container .icon-navbar {
+    position: relative;
+    color: white;
+    font-size: 23px;
+    transition: 0.4s;
+}
+.icon-navbar-container .icon-navbar.active {
+    transform: rotate(90deg);
+}
+
+@media only screen and (max-width:1000px) {
+    .HeaderContainerLogo img {
+        width:44px;
+        height: 44px;
+    }
+    .HeaderContainerLogo h1 {
+        font-size: 27px;
+    }
+    .HeaderContainerLogin h3 {
+        width: 106px;
+        height: 36px;
+        font-size: 17px;
+    }
+    .HeaderContainerSocialMedia span .icon {
+        font-size: 30px;
+    }
+    .icon-navbar-container {
+        width:32px;
+        height: 32px;
+    }
+    .icon-navbar-container .icon-navbar {
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width:830px) {
+    .HeaderContainerLogo img {
+        width:42px;
+        height: 42px;
+    }
+    .HeaderContainerLogo h1 {
+        font-size: 22px;
+    }
+    .HeaderContainerLogin h3 {
+        width: 96px;
+        height: 36px;
+        font-size: 15px;
+       
+    }
+    .HeaderContainerSocialMedia span .icon {
+        font-size: 28px;
+    }
+    .icon-navbar-container {
+        width:30px;
+        height: 30px;
+    }
+    .icon-navbar-container .icon-navbar {
+        font-size: 18px;
+    }
+}
+@media only screen and (max-width:724px) {
+    .HeaderContainerLogo img {
+        width:42px;
+        height: 42px;
+    }
+    .HeaderContainerLogo h1 {
+        font-size: 17px;
+    }
+    .HeaderContainerLogin h3 {
+        width: 78px;
+        height: 36px;
+        font-size: 12px;
+    }
+    .HeaderContainerSocialMedia span .icon {
+        font-size: 26px;
+    }
+    .icon-navbar-container {
+        width:28px;
+        height: 28px;
+    }
+    .icon-navbar-container .icon-navbar {
+        font-size: 17px;
+    }
+}
+@media only screen and (max-width:600px) {
+    .HeaderContainerLogo img {
+        width:40px;
+        height: 40px;
+    }
+    .HeaderContainerLogo h1 {
+        font-size: 14px;
+    }
+    .HeaderContainerLogin h3 {
+        width: 68px;
+        height: 36px;
+        font-size: 10px;
+        left: 10px;
+    }
+    .HeaderContainerSocialMedia span .icon {
+        font-size: 25px;
+    }
+    .icon-navbar-container {
+        width:26px;
+        height: 26px;
+    }
+    .icon-navbar-container .icon-navbar {
+        font-size: 16px;
+    }
+}
+@media only screen and (max-width:546px) {
+    .HeaderContainerLogo img {
+        width:40px;
+        height: 40px;
+    }
+    .HeaderContainerLogo h1 {
+        font-size: 12px;
+    }
+    .HeaderContainerLogin h3 {
+        width: 60px;
+        font-size: 8px;
+    }
+    .HeaderContainerSocialMedia span .icon {
+        font-size: 23px;
+    }
+    .icon-navbar-container {
+        width:23px;
+        height: 23px;
+    }
+    .icon-navbar-container .icon-navbar {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width:510px) {
+    .HeaderContainerLogo img {
+        width:40px;
+        height: 40px;
+    }
+    .HeaderContainerLogo h1 {
+        font-size: 11px;
+    }
+    .HeaderContainerLogin h3 {
+        width: 52px;
+        font-size: 7px;
+    }
+    .HeaderContainerSocialMedia span .icon {
+        font-size: 21px;
+    }
+    .icon-navbar-container {
+        width:22px;
+        height: 22px;
+    }
+    .icon-navbar-container .icon-navbar {
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width:480px) {
+
+    .HeaderContainerLogo img {
+        width:40px;
+        height: 40px;
+    }
+    .HeaderContainerLogo h1 {
+        font-size: 9px;
+        height: 36px;
+    }
+    .HeaderContainerLogin h3 {
+        width: 42px;
+        height: 30px;
+        font-size: 4.5px;
+    }
+    .HeaderContainerSocialMedia span .icon {
+        font-size: 17.5px;
+    }
+    .icon-navbar-container {
+        width:20px;
+        height: 20px;
+    }
+    .icon-navbar-container .icon-navbar {
+        font-size: 12px;
+    }
+}

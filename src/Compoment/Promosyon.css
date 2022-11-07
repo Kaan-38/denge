@@ -1,0 +1,32 @@
+.ContainerPromosyonKapsam {
+    position:relative;
+    width: 100%;
+    height: auto;
+    top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.ContainerPromosyon {
+    position: relative;
+    width: 354px;
+    height: 262px;
+    box-shadow:0 0 16px #477ac4;
+    overflow:hidden;
+    border-radius: 8px;
+    margin: 8px;
+}
+.ContainerPromosyon::-webkit-scrollbar {
+    display:none;
+}
+.ContainerPromosyon img {
+    position: relative;
+    width: 354px;
+    height: 262px;
+    cursor: pointer;
+    transition: 0.6s;
+}
+.ContainerPromosyon img:hover {
+    transform: scale(1.04);
+}

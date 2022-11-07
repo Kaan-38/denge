@@ -1,25 +1,29 @@
-import logo from './logo.svg';
+import React, { useState } from 'react'
 import './App.css';
+import Header from './Compoment/Header';
+import LiveChat from './Compoment/LiveChat';
+import Navbar from './Compoment/Navbar';
+import Promosyon from './Compoment/Promosyon';
+const App = () => {
+  const [navbaropen, setNavbaropen] = useState(false)
+  console.log(navbaropen)
 
-function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+       <Header
+        setNavbaropen={setNavbaropen}
+        navbaropen={navbaropen}
+        />
+
+       <Navbar
+       navbaropen={navbaropen}
+       />
+
+       <Promosyon />
+        
+       <LiveChat />
+    </>
+  )
 }
 
-export default App;
+export default App
